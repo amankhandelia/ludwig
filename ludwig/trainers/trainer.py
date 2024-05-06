@@ -1002,7 +1002,7 @@ class Trainer(BaseTrainer):
                 self.scheduler = LRScheduler(
                     self.config.learning_rate_scheduler,
                     self.optimizer,
-                    steps_per_checkpoint=final_steps_per_checkpoint,
+                    steps_per_checkpoint=self.steps_per_epoch,
                     total_steps=self.total_steps,
                 )
 
